@@ -16,7 +16,7 @@ I chose this data set because it represents a realistic scenario in the food and
 
 ## 4. Data Preparation
 The project involved 4 CSV files containing:
-1. <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”>Order_details</a>: Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
+1. <a href=“(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”>Orderdetails</a> : Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
 2. **Orders:** Order_id, Date, Time.
 3. **Pizzas:** Pizza_id, Pizza_type_id, Size, Price.
 4. **Pizza Types:** Pizza_type_id, Name, Category, Ingredients.
@@ -102,10 +102,10 @@ _Recommendations:_
 
 ## 10. How to Access the Project
 Download the files from this repository:
-**1. Order_details.csv**
-**2. Orders.csv**
-**3. Pizzas.csv**
-**4. Pizza_types.csv**
+- **1. Order_details.csv**
+- **2. Orders.csv**
+- **3. Pizzas.csv**
+- **4. Pizza_types.csv**
 
 Open the Tableau Packaged Workbook **([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))** in Tableau Public.
 
