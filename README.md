@@ -122,17 +122,17 @@ View the interactive dashboard here:
 
 ## USING SQL TO FIND Exploratory Data Analysis (EDA):
 
-1.     **-- REVENUE BY HOURS --> Find the crowded time (breakfast, lunch, dinner)**
-2.     **-- PEAK HOURS**
-3.      SELECT `hour`, 
-4.             sum(Order_details.total_price) AS Total_revenue
-5.      FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
-6.                    Order_details.total_price 
-7.             FROM orders
-8.             LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
-9.      GROUP BY `hour`
-10.     ORDER BY 2 DESC; 
-11.     -- to find out the rush hours for scheduling more staffs and ordering more supplying materials
+     **-- REVENUE BY HOURS --> Find the crowded time (breakfast, lunch, dinner)**
+     **-- PEAK HOURS**
+ 1.      SELECT `hour`, 
+             sum(Order_details.total_price) AS Total_revenue
+      FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
+                   Order_details.total_price 
+             FROM orders
+             LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
+      GROUP BY `hour`
+       ORDER BY 2 DESC; 
+     -- to find out the rush hours for scheduling more staffs and ordering more supplying materials
 
 1      **-- REVENUE BY MONTHS --> Find the busiest months => hope to find seasonal patterns**
 2      SELECT `month`, 
