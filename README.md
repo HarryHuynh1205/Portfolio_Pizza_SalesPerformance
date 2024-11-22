@@ -1,8 +1,9 @@
 ## PIZZA SALES PERFORMANCE _ PORTFOLIO
 
 ## 1. Introduction
-Project Title: Pizza Sales Performance Analysis
-Overview:
+**Project Title:** Pizza Sales Performance Analysis
+
+**Overview:**
 This project analyzes pizza sales data to identify key trends, customer preferences, and timely insights into sales patterns can significantly impact operations, from inventory management to marketing campaigns. This analysis simulates a real-world scenario to improve decision-making using historical sales data.
 
 ## 2. Why is this Data set?
@@ -16,7 +17,7 @@ I chose this data set because it represents a realistic scenario in the food and
 
 ## 4. Data Preparation
 The project involved 4 CSV files containing:
-1. <a href=“(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”>Orderdetails</a> : Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
+1. [order_details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
 2. **Orders:** Order_id, Date, Time.
 3. **Pizzas:** Pizza_id, Pizza_type_id, Size, Price.
 4. **Pizza Types:** Pizza_type_id, Name, Category, Ingredients.
