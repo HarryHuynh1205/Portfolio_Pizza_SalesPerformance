@@ -46,6 +46,7 @@ Steps Taken:
 
 ### Exploratory Data Analysis:
 **EDA** involved exploring the sales data to answer key questions, such as:
+
   **1. Sales Trends**
    1. What are the total sales over time (daily, weekly or monthly)?
    2. Are there seasonal patterns or specific times (e.g., weekdays and weekends) with higher sales?
@@ -121,166 +122,166 @@ View the interactive dashboard here:
 
 ## USING SQL TO FIND Exploratory Data Analysis (EDA):
 
-**-- REVENUE BY HOURS --> Find the crowded time (breakfast, lunch, dinner)
--- PEAK HOURS**
-SELECT `hour`, 
-sum(Order_details.total_price) AS Total_revenue
-FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
-Order_details.total_price 
-FROM orders
-LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
-GROUP BY `hour`
-ORDER BY 2 DESC; 
--- to find out the rush hours for scheduling more staffs and ordering more supplying materials
+1     **-- REVENUE BY HOURS --> Find the crowded time (breakfast, lunch, dinner)**
+2     **-- PEAK HOURS**
+3      SELECT `hour`, 
+4             sum(Order_details.total_price) AS Total_revenue
+5      FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
+6                    Order_details.total_price 
+7             FROM orders
+8             LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
+9      GROUP BY `hour`
+10     ORDER BY 2 DESC; 
+11     -- to find out the rush hours for scheduling more staffs and ordering more supplying materials
 
-**-- REVENUE BY MONTHS --> Find the busiest months => hope to find seasonal patterns**
-SELECT `month`, 
-sum(Order_details.total_price) AS Total_revenue
-FROM ( SELECT MONTH(orders.`date`) AS `month`, 
-Order_details.total_price 
-FROM orders AS o
-LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
-GROUP BY `month`
-ORDER BY sum(Total_revenue) DESC;
+1      **-- REVENUE BY MONTHS --> Find the busiest months => hope to find seasonal patterns**
+2      SELECT `month`, 
+3              sum(Order_details.total_price) AS Total_revenue
+4      FROM ( SELECT MONTH(orders.`date`) AS `month`, 
+5                    Order_details.total_price 
+6             FROM orders AS o
+7             LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
+8      GROUP BY `month`
+9      ORDER BY sum(Total_revenue) DESC;
 
-**-- AVG REVENUE per ORDER**
-SELECT count(distinct O.order_id) AS Order_num, 
-sum(OD.Total_price), 
-sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
-FROM orders AS o
-LEFT JOIN Order_details AS OD ON OD.Order_id = O.Order_id; 
-
-
-**-- REVENUE BY TOTAL ORDERS**
-SELECT count(distinct O.order_id) AS Order_num, 
-sum(OD.Total_price), 
-sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
-FROM orders AS O
-LEFT JOIN Order_details AS OD ON OD.Order_id = O.Order_id;
+1      **-- AVG REVENUE per ORDER**
+2      SELECT count(distinct O.order_id) AS Order_num, 
+3      sum(OD.Total_price), 
+4      sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
+5      FROM orders AS o
+6      LEFT JOIN Order_details AS OD ON OD.Order_id = O.Order_id; 
 
 
-**-- REVENUE BY SIZES**
--- REVENUE per Size
-SELECT p.size, 
-count(OD.quantity) AS total_quantity, 
-sum(Od.Total_price) AS revenue
-FROM pizzas As p
-LEFT JOIN Order_details AS OD ON OD.pizza_id = p.pizza_id
-GROUP BY p.size
-ORDER BY count(OD.quantity) DESC; 
--- to know the favourite size and the amount of dough
+1      **-- REVENUE BY TOTAL ORDERS**
+2      SELECT count(distinct O.order_id) AS Order_num, 
+3      sum(OD.Total_price), 
+4      sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
+5      FROM orders AS O
+6      LEFT JOIN Order_details AS OD ON OD.Order_id = O.Order_id;
 
 
-**-- PIZZAS SOLD PER DAY:**
-**-- Average Number of Pizza Sold Per Day**
-SELECT sum(quantity)/31 AS Num_Pizza_perday
-FROM order_details; 
--- to estimate the amount of pizza dough needed
+1      **-- REVENUE BY SIZES**
+2      -- REVENUE per Size
+3      SELECT p.size, 
+4      count(OD.quantity) AS total_quantity, 
+5      sum(Od.Total_price) AS revenue
+6      FROM pizzas As p
+7      LEFT JOIN Order_details AS OD ON OD.pizza_id = p.pizza_id
+8      GROUP BY p.size
+9      ORDER BY count(OD.quantity) DESC; 
+10      -- to know the favourite size and the amount of dough
 
 
-**PIZZA SOLD PER DAY: DATE(date) + TOTAL QUANTITY**
-**-- Number of Pizza Sold Per Day (1st -31st)**
-SELECT SUBSTRING(`date`,9,2) AS `day`, 
-sum(quantity) As total_quantity_perday
-FROM orders AS o
-JOIN Order_details AS OD ON OD.order_id = o.order_id
-GROUP BY SUBSTRING(`date`,9,2); 
--- to schdelue to more staffs and prepare for more ingredients
+1      **-- PIZZAS SOLD PER DAY:**
+2      **-- Average Number of Pizza Sold Per Day**
+3      SELECT sum(quantity)/31 AS Num_Pizza_perday
+4     FROM order_details; 
+5     -- to estimate the amount of pizza dough needed
 
 
--- I want to compare the number of category's pizza chosen by their Total Order vs Total Quantity, if there is interesting
-**-- TOTAL QUANTITY sold by CATEGORY:** 
-SELECT pt.category, 
-sum(od.quantity) As total_quantity
-FROM pizza_types as Pt
-JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
-JOIN Order_details AS od ON od.pizza_id = p.pizza_id
-GROUP BY pt.category; 
--- to understand the bestseller category which ingredients should be available in store
-
-**-- TOTAL ORDERS sold by CATEGORY:** 
-SELECT pt.category, 
-count(DISTINCT o.order_id) As total_order
-FROM pizza_types as Pt
-JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
-JOIN Order_details AS od ON od.pizza_id = P.pizza_id
-JOIN Orders AS o ON o.order_id = od.order_id
-GROUP BY pt.category; 
--- to understand the bestseller category which ingredients should be available in store
--- Then I want to know more about the Revenue of each Category which I can help understand the customer preference and estimate the inventory suppliers
-
-**-- TOTAL REVENUE sold by CATEGORY**
-SELECT pt.category, 
-sum(total_price) As Revenue
-FROM pizza_types as Pt
-JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
-JOIN Order_details AS od ON od.pizza_id = P.pizza_id
-GROUP BY pt.category; 
--- to know the bestseller which should have more promotions or the lowest-paid pizza should be changed their recipes or getting more promotion if needed
+1      **PIZZA SOLD PER DAY: DATE(date) + TOTAL QUANTITY**
+2      **-- Number of Pizza Sold Per Day (1st -31st)**
+3      SELECT SUBSTRING(`date`,9,2) AS `day`, 
+4      sum(quantity) As total_quantity_perday
+5      FROM orders AS o
+6      JOIN Order_details AS OD ON OD.order_id = o.order_id
+7      GROUP BY SUBSTRING(`date`,9,2); 
+8      -- to schdelue to more staffs and prepare for more ingredients
 
 
-**-- BEST and WORST PIZZA:**
--- BEST and WORST PIZZA:
--- (Top5) Name + Total QUANTITY 
-SELECT  pt.name,
-sum(od.quantity)
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-GROUP BY pt.name
-ORDER BY sum(od.quantity) DESC; 
+1      -- I want to compare the number of category's pizza chosen by their Total Order vs Total Quantity, if there is interesting
+2      **-- TOTAL QUANTITY sold by CATEGORY:** 
+3      SELECT pt.category, 
+4      sum(od.quantity) As total_quantity
+5      FROM pizza_types as Pt
+6      JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
+7      JOIN Order_details AS od ON od.pizza_id = p.pizza_id
+8      GROUP BY pt.category; 
+9      -- to understand the bestseller category which ingredients should be available in store
+
+1      **-- TOTAL ORDERS sold by CATEGORY:** 
+2      SELECT pt.category, 
+3      count(DISTINCT o.order_id) As total_order
+4      FROM pizza_types as Pt
+5      JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
+6      JOIN Order_details AS od ON od.pizza_id = P.pizza_id
+7      JOIN Orders AS o ON o.order_id = od.order_id
+8      GROUP BY pt.category; 
+9      -- to understand the bestseller category which ingredients should be available in store
+10      -- Then I want to know more about the Revenue of each Category which I can help understand the customer preference and estimate the inventory suppliers
+
+1      **-- TOTAL REVENUE sold by CATEGORY**
+2      SELECT pt.category, 
+3      sum(total_price) As Revenue
+4      FROM pizza_types as Pt
+5      JOIN Pizzas AS p ON p.pizza_type_id = Pt.pizza_type_id
+6      JOIN Order_details AS od ON od.pizza_id = P.pizza_id
+7      GROUP BY pt.category; 
+8      -- to know the bestseller which should have more promotions or the lowest-paid pizza should be changed their recipes or getting more promotion if needed
 
 
--- (Bottom5) Name + Total QUANTITY
-SELECT  pt.name,
-sum(od.quantity)
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-GROUP BY pt.name
-ORDER BY sum(od.quantity) ASC;
+1      **-- BEST and WORST PIZZA:**
+2      -- BEST and WORST PIZZA:
+3      -- (Top5) Name + Total QUANTITY 
+4      SELECT  pt.name,
+5      sum(od.quantity)
+6      FROM pizza_types AS pt
+7      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+8      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+9      GROUP BY pt.name
+10      ORDER BY sum(od.quantity) DESC; 
 
 
--- (Top5) Name + Total REVENUE 
-SELECT  pt.name,
-sum(od.total_price)
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-GROUP BY pt.name
-ORDER BY sum(od.total_price) DESC;
+1      -- (Bottom5) Name + Total QUANTITY
+2      SELECT  pt.name,
+3      sum(od.quantity)
+4      FROM pizza_types AS pt
+5      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+6      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+7      GROUP BY pt.name
+8      ORDER BY sum(od.quantity) ASC;
 
 
--- (Bottom5) Name + Total REVENUE
-SELECT  pt.name,
-sum(od.total_price)
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-GROUP BY pt.name
-ORDER BY sum(od.total_price) ASC;
+1      -- (Top5) Name + Total REVENUE 
+2      SELECT  pt.name,
+3      sum(od.total_price)
+4      FROM pizza_types AS pt
+5      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+6      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+7      GROUP BY pt.name
+8      ORDER BY sum(od.total_price) DESC;
 
 
--- (Top5) Name + Total ORDERS
-SELECT  pt.name,
-count(distinct od.order_id) AS total_order
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-JOIN orders AS o ON o.order_id = od. order_id
-GROUP BY pt.name
-ORDER BY  count(distinct od.order_id) DESC;
+1      -- (Bottom5) Name + Total REVENUE
+2      SELECT  pt.name,
+3      sum(od.total_price)
+4      FROM pizza_types AS pt
+5      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+6      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+7      GROUP BY pt.name
+8      ORDER BY sum(od.total_price) ASC;
 
 
--- (Bottom5) Name + Total ORDERS
-SELECT  pt.name,
-count(distinct od.order_id) AS total_order
-FROM pizza_types AS pt
-JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
-JOIN order_details AS od ON od.pizza_id = p.pizza_id
-JOIN orders AS o ON o.order_id = od. order_id
-GROUP BY pt.name
-ORDER BY  count(distinct od.order_id) ASC;
+1      -- (Top5) Name + Total ORDERS
+2      SELECT  pt.name,
+3      count(distinct od.order_id) AS total_order
+4      FROM pizza_types AS pt
+5      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+6      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+7      JOIN orders AS o ON o.order_id = od. order_id
+8      GROUP BY pt.name
+9      ORDER BY  count(distinct od.order_id) DESC;
+
+
+1      -- (Bottom5) Name + Total ORDERS
+2      SELECT  pt.name,
+3      count(distinct od.order_id) AS total_order
+4      FROM pizza_types AS pt
+5      JOIN pizzas AS p ON pt.pizza_type_id = p.pizza_type_id
+6      JOIN order_details AS od ON od.pizza_id = p.pizza_id
+7      JOIN orders AS o ON o.order_id = od. order_id
+8      GROUP BY pt.name
+9      ORDER BY  count(distinct od.order_id) ASC;
 
 
 
