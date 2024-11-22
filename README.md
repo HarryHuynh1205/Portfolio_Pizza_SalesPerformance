@@ -123,12 +123,12 @@ View the interactive dashboard here:
 # USING SQL TO FIND Exploratory Data Analysis (EDA):
 **A. REVENUE BY HOURS**
 ```sql
-    SELECT `hour`, 
+      SELECT `hour`, 
              sum(Order_details.total_price) AS Total_revenue
       FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
                    Order_details.total_price 
              FROM orders
              LEFT JOIN Order_details ON Order_details.Order_id = orders.Order_id) AS Hour_Revenue
       GROUP BY `hour`
-       ORDER BY 2 DESC;```
+      ORDER BY 2 DESC;```
 -- to find out the rush hours for scheduling more staffs and ordering more supplying materials
