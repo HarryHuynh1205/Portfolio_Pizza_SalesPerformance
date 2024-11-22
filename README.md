@@ -16,7 +16,7 @@ I chose this data set because it represents a realistic scenario in the food and
 
 ## 4. Data Preparation
 The project involved 4 CSV files containing:
-1. - <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”> Order_details</a>: Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
+1. <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”>Order_details</a>: Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
 2. **Orders:** Order_id, Date, Time.
 3. **Pizzas:** Pizza_id, Pizza_type_id, Size, Price.
 4. **Pizza Types:** Pizza_type_id, Name, Category, Ingredients.
