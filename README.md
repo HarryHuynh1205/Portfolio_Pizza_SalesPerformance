@@ -121,7 +121,7 @@ View the interactive dashboard here:
 
 
 # USING SQL TO FIND Exploratory Data Analysis (EDA):
--**-REVENUE BY HOURS --> Find the crowded hours (breakfast, lunch, dinner)**
+**A. REVENUE BY HOURS**
 ```sql
     SELECT `hour`, 
              sum(Order_details.total_price) AS Total_revenue
