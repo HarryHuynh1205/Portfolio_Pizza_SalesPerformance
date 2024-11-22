@@ -17,10 +17,10 @@ I chose this data set because it represents a realistic scenario in the food and
 
 ## 4. Data Preparation
 The project involved 4 CSV files containing:
-1. [order_details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
-2. **Orders:** Order_id, Date, Time.
-3. **Pizzas:** Pizza_id, Pizza_type_id, Size, Price.
-4. **Pizza Types:** Pizza_type_id, Name, Category, Ingredients.
+1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
+2. [Orders.csv](https://github.com/user-attachments/files/17858575/orders.csv): Order_id, Date, Time.
+3. [Pizzas.csv](https://github.com/user-attachments/files/17858658/pizzas.csv): Pizza_id, Pizza_type_id, Size, Price.
+4. [Pizza_Types.csv](https://github.com/user-attachments/files/17858621/pizza_types.csv): Pizza_type_id, Name, Category, Ingredients.
    
 Steps Taken:
 - Removed duplicates and handled missing values.
@@ -103,10 +103,11 @@ _Recommendations:_
 
 ## 10. How to Access the Project
 Download the files from this repository:
-- **1. Order_details.csv**
-- **2. Orders.csv**
-- **3. Pizzas.csv**
-- **4. Pizza_types.csv**
+
+- **1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv)**
+- **2. [Orders.csv](https://github.com/user-attachments/files/17858575/orders.csv)**
+- **3. [Pizzas.csv](https://github.com/user-attachments/files/17858658/pizzas.csv)**
+- **4. [Pizza_Types.csv](https://github.com/user-attachments/files/17858621/pizza_types.csv)**
 
 Open the Tableau Packaged Workbook **([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))** in Tableau Public.
 
