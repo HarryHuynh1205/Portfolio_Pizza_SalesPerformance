@@ -132,7 +132,3 @@ View the interactive dashboard here:
       GROUP BY `hour`
        ORDER BY 2 DESC;```
 -- to find out the rush hours for scheduling more staffs and ordering more supplying materials
-
-
-
-
