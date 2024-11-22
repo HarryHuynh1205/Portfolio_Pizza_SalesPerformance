@@ -16,7 +16,7 @@ I chose this data set because it represents a realistic scenario in the food and
 
 ## 4. Data Preparation
 The project involved 4 CSV files containing:
-1. **Order Details:** Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
+1. - <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/order_details.csv)”> Order_details</a>: Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
 2. **Orders:** Order_id, Date, Time.
 3. **Pizzas:** Pizza_id, Pizza_type_id, Size, Price.
 4. **Pizza Types:** Pizza_type_id, Name, Category, Ingredients.
@@ -45,7 +45,7 @@ Steps Taken:
 
 ### Exploratory Data Analysis
 EDA involved exploring the sales data to answer key questions, such as:
-   **1. Sales Trends**
+  **1. Sales Trends**
 1. What are the total sales over time (daily, weekly or monthly)?
 2. Are there seasonal patterns or specific times (e.g., weekdays and weekends) with higher sales?
 3. What is the busiest time of day for pizza orders (e.g., breakfast, lunch or dinner)?
@@ -84,7 +84,7 @@ The Tableau dashboard includes:
 5. A second line chart showing the number of pizzas sold per day and estimating the numbers averagely
 6. A second bar chart to present the quantities of category pizzas selected by Total Number sold and Total Orders
 7. The Six of Bar Charts presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
-8. ## Data Visualization (Tableau)
+8. **Data Visualization (Tableau)**
 
 ## 8. Conclusion
 The analysis revealed that large (L) pizzas generate the highest revenue, with Classic Deluxe pizza and Barbecue Chicken pizza being the most popular choices among customers. Sales peak during lunch and dinner hours and most crowded on Fridays, highlighting key times for promotional efforts.
@@ -102,10 +102,10 @@ _Recommendations:_
 
 ## 10. How to Access the Project
 Download the files from this repository:
-**1. Order_details.csv
-2. Orders.csv
-3. Pizzas.csv
-4. Pizza_types.csv**
+**1. Order_details.csv**
+**2. Orders.csv**
+**3. Pizzas.csv**
+**4. Pizza_types.csv**
 
 Open the Tableau Packaged Workbook **([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))** in Tableau Public.
 
