@@ -110,6 +110,8 @@ Download the files from this repository:
 Open the Tableau Packaged Workbook **([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))** in Tableau Public.
 
 View the interactive dashboard here: 
-- https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Overview%20Pizza%20Dashboard.png 
-- [<a href= “(Best vs Worst Pizza Dashboard.png)”>Overview_Pizza_Dashboard</a>.](https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Overview%20Pizza%20Dashboard.png) 
+- **OVERVIEW PIZZA DASHBOARD**
+![Overview Pizza Dashboard](https://github.com/user-attachments/assets/1a9b8d69-95ea-44e2-84bc-4854d97f9cd6)
 
+- **BEST vs WORST BEST DASHBOARD**
+![Best vs Worst Pizza Dashboard](https://github.com/user-attachments/assets/89d83bc9-c052-48bf-adde-da25659532f0)
