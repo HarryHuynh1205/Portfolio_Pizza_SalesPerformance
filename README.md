@@ -106,6 +106,10 @@ Download the files from this repository:
 2. Orders.csv
 3. Pizzas.csv
 4. Pizza_types.csv**
+
 Open the Tableau Packaged Workbook **([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))** in Tableau Public.
-View the interactive dashboard here: - <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Overview%20Pizza%20Dashboard.png)”>Overview_Pizza_Dashboard</a>. 
-                                     - <a href= “(https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Best%20vs%20Worst%20Pizza%20Dashboard.png)”>Best-Worst_Pizza_Dasboard</a>.
+
+View the interactive dashboard here: 
+- https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Overview%20Pizza%20Dashboard.png 
+- [<a href= “(Best vs Worst Pizza Dashboard.png)”>Overview_Pizza_Dashboard</a>.](https://github.com/HarryHuynh1205/Portfolio_Pizza_SalesPerformance/blob/main/Overview%20Pizza%20Dashboard.png) 
+
