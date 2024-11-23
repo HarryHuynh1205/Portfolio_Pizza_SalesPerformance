@@ -20,11 +20,13 @@ This project analyzes pizza sales data to identify key trends, customer preferen
 I chose this data set because it represents a realistic scenario in the food and beverage industry. The data set has 4 CSV Excel Sheets which help me practice with Sub-query and Join query.
 
 ## 2. KEY QUESTIONS:
+
 **Key Questions** 
    1. Which types of pizzas were most popular across different customer segments?
    2. What were the peak sales hours or days?
    3. How many pizzas were sold per day?
    4. Are there any trends in order sizes and types?
+      
 **Dataset**   
   The project involved 4 CSV files containing:
    1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
@@ -93,7 +95,7 @@ The Tableau dashboard includes:
    5. A second line chart showing the number of pizzas sold per day and estimating the numbers averagely
    6. A second bar chart to present the quantities of category pizzas selected by Total Number sold and Total Orders
    7. The Six of Bar Charts presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
-   _**8. Data Visualization (Tableau)**_
+   **8. Data Visualization (Tableau)**
 
 ## 6. CONCLUSION:
 The analysis revealed that large (L) pizzas generate the highest revenue, with Classic Deluxe pizza and Barbecue Chicken pizza being the most popular choices among customers. Sales peak during lunch and dinner hours and most crowded on Fridays, highlighting key times for promotional efforts.
