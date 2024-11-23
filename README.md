@@ -1,16 +1,16 @@
 ## PIZZA SALES PERFORMANCE _ PORTFOLIO
 
-## TABLE OF CONTENT [Revenue by Hours](#revenue-by-hours)
-1. [Introduction:](#Introduction:)
-2. [Key Questions](#Key-Questions)
-3. [Skills and Tools Used](#Skills-and-Tools-Used)
-4. [Analysis and Insights](#Analysis-and-Insights)
-5. [Visualizations:](#Visualizations:)
-6. [Conclusion:](#Conclusion:)
-7. [How to Access the Project:](#How-to-Access-the-Project:)
+## TABLE OF CONTENT
+1. [INTRODUCTION](#INTRODUCTION)
+2. [KEY QUESTIONS](#KEY-QUESTIONS)
+3. [SKILLS vs TOOLS](#SKILLS-vs-TOOLS)
+4. [ANALYSIS vs INSIGHTS](#ANALYSIS-vs-INSIGHTS)
+5. [VISUALIZATIONS](#VISUALIZATIONS)
+6. [CONCLUSION](#CONCLUSION)
+7. [HOW TO ACCESS THE PROJECT](#HOW-TO-ACCESS-THE-PROJECT)
 8. [USING SQL QUERIES](#USING-SQL-QUERIES)
 
-## 1. Introduction:
+## 1. INTRODUCTION:
 **Project Title:** Pizza Sales Performance Analysis
 
 **Overview:**
@@ -19,20 +19,20 @@ This project analyzes pizza sales data to identify key trends, customer preferen
 **Why is this Data set?**
 I chose this data set because it represents a realistic scenario in the food and beverage industry. The data set has 4 CSV Excel Sheets which help me practice with Sub-query and Join query.
 
-## 2. Key Questions:
+## 2. KEY QUESTIONS:
 **Key Questions** 
    1. Which types of pizzas were most popular across different customer segments?
    2. What were the peak sales hours or days?
    3. How many pizzas were sold per day?
    4. Are there any trends in order sizes and types?
-      
+**Dataset**   
   The project involved 4 CSV files containing:
    1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
    2. [Orders.csv](https://github.com/user-attachments/files/17858575/orders.csv): Order_id, Date, Time.
    3. [Pizzas.csv](https://github.com/user-attachments/files/17858658/pizzas.csv): Pizza_id, Pizza_type_id, Size, Price.
    4. [Pizza_Types.csv](https://github.com/user-attachments/files/17858621/pizza_types.csv): Pizza_type_id, Name, Category, Ingredients.
       
-## 3. Skills and Tools Used:
+## 3. SKILLS vs TOOLS:
 ### Tools:
   - Excel for data cleaning and calculations
   - SQL for additional analysis
@@ -67,7 +67,7 @@ In the initial data preparation phase, we performed the following tasks:
    4. What were the best and lowest-paid pizza name?
    5. What kinds of pizza name generate more revenue?
 
-## Data Analysis:
+### Data Analysis:
 Include some interesting code/features worked with in **MySQL**:
    1. **SELECT** * **FROM** table 1 **WHERE** cond = 2;
    2. **SELECT** * **FROM** table 1 **WHERE** cond = 2 **GROUP BY** column1 **ORDER BY** column2;
@@ -77,14 +77,14 @@ Include some interesting code/features worked with in **MySQL**:
    4. **JOIN Query**
    5. **Sub-Query**
 
-## 4. Analysis and Insights:
+## 4. ANALYSIS vs INSIGHTS:
 Key Insights:
    1. People tended to buy pizzas increasingly on weekdays during lunch and dinner time, especially on Fridays (the busiest)
    2. The Classic Deluxe pizza was the most popular among customers; however, the Barbecue Chicken pizza brought the most revenue.
    3. The Large(L) size of pizzas generated the highest revenue.
    4. Promotions on family-size orders could increase revenue further, especially on Fridays and weekends.
 
-## 5. Visualizations:
+## 5. VISUALIZATIONS:
 The Tableau dashboard includes:
    1. A sales trend line chart to visualize peak hours.
    2. A bar chart showing the highest revenue per day in weeks.
@@ -95,7 +95,7 @@ The Tableau dashboard includes:
    7. The Six of Bar Charts presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
    _**8. Data Visualization (Tableau)**_
 
-## 6. Conclusion:
+## 6. CONCLUSION:
 The analysis revealed that large (L) pizzas generate the highest revenue, with Classic Deluxe pizza and Barbecue Chicken pizza being the most popular choices among customers. Sales peak during lunch and dinner hours and most crowded on Fridays, highlighting key times for promotional efforts.
 
 _Recommendations:_
@@ -109,7 +109,7 @@ _Limitation:_
   - Be outdated because it was in 2015. 
   - Should add locations for being more particular
 
-## 7. How to Access the Project:
+## 7. HOW TO ACCESS THE PROJECT:
 Download the files from this repository:
 
   - **1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv)**
