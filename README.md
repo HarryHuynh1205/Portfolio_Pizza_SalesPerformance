@@ -3,15 +3,12 @@
 ## TABLE OF CONTENT [Revenue by Hours](#revenue-by-hours)
 1. [Introduction:](#Introduction:)
 2. [Key Questions](#Key_Questions)
-3. [Revenue by Hours](#revenue-by-hours)
-4. [Revenue by Hours](#revenue-by-hours)
-5. [Revenue by Hours](#revenue-by-hours)
-6. [Revenue by Hours](#revenue-by-hours)
-7. [Revenue by Hours](#revenue-by-hours)
-8. [Revenue by Hours](#revenue-by-hours)
-9. [Revenue by Hours](#revenue-by-hours)
-10. [Revenue by Hours](#revenue-by-hours)
-11. [Revenue by Hours](#revenue-by-hours)
+3. [Skills and Tools Used](#Skills_and_Tools_Used)
+4. [Analysis and Insights](#Analysis_and_Insights)
+5. [Visualizations:](#Visualizations:)
+6. [Conclusion:](#Conclusion:)
+7. [How to Access the Project:](#How_to_Access_the_Project:)
+8. [USING SQL QUERIES](#USING_SQL_QUERIES)
 
 ## 1. Introduction:
 **Project Title:** Pizza Sales Performance Analysis
