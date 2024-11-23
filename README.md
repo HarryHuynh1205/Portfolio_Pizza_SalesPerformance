@@ -34,7 +34,8 @@ I chose this data set because it represents a realistic scenario in the food and
    2. [Orders.csv](https://github.com/user-attachments/files/17858575/orders.csv): Order_id, Date, Time.
    3. [Pizzas.csv](https://github.com/user-attachments/files/17858658/pizzas.csv): Pizza_id, Pizza_type_id, Size, Price.
    4. [Pizza_Types.csv](https://github.com/user-attachments/files/17858621/pizza_types.csv): Pizza_type_id, Name, Category, Ingredients.
-The data link source from Kaggle: https://www.kaggle.com/datasets/mysarahmadbhat/pizza-place-sales
+
+The data link source from Kaggle: [Pizza Sales Data](https://www.kaggle.com/datasets/mysarahmadbhat/pizza-place-sales)
 
 ## 3. SKILLS vs TOOLS:
 ### Tools:
