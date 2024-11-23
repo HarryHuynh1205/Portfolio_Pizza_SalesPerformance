@@ -1,33 +1,41 @@
 ## PIZZA SALES PERFORMANCE _ PORTFOLIO
 
+## TABLE OF CONTENT [Revenue by Hours](#revenue-by-hours)
+1. [Introduction:](#Introduction:)
+2. [Key Questions](#Key_Questions)
+3. [Revenue by Hours](#revenue-by-hours)
+4. [Revenue by Hours](#revenue-by-hours)
+5. [Revenue by Hours](#revenue-by-hours)
+6. [Revenue by Hours](#revenue-by-hours)
+7. [Revenue by Hours](#revenue-by-hours)
+8. [Revenue by Hours](#revenue-by-hours)
+9. [Revenue by Hours](#revenue-by-hours)
+10. [Revenue by Hours](#revenue-by-hours)
+11. [Revenue by Hours](#revenue-by-hours)
+
 ## 1. Introduction:
 **Project Title:** Pizza Sales Performance Analysis
 
 **Overview:**
 This project analyzes pizza sales data to identify key trends, customer preferences, and timely insights into sales patterns can significantly impact operations, from inventory management to marketing campaigns. This analysis simulates a real-world scenario to improve decision-making using historical sales data.
 
-## 2. Why is this Data set?:
+**Why is this Data set?**
 I chose this data set because it represents a realistic scenario in the food and beverage industry. The data set has 4 CSV Excel Sheets which help me practice with Sub-query and Join query.
 
-## 3. Key Questions Explored:
+## 2. Key Questions:
+**Key Questions** 
    1. Which types of pizzas were most popular across different customer segments?
    2. What were the peak sales hours or days?
    3. How many pizzas were sold per day?
    4. Are there any trends in order sizes and types?
-
-## 4. Data Preparation:
-The project involved 4 CSV files containing:
+      
+  The project involved 4 CSV files containing:
    1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv): Order_detail_id, Order_id, Pizza_id, Quantity, Unit_price, Total_price.
    2. [Orders.csv](https://github.com/user-attachments/files/17858575/orders.csv): Order_id, Date, Time.
    3. [Pizzas.csv](https://github.com/user-attachments/files/17858658/pizzas.csv): Pizza_id, Pizza_type_id, Size, Price.
    4. [Pizza_Types.csv](https://github.com/user-attachments/files/17858621/pizza_types.csv): Pizza_type_id, Name, Category, Ingredients.
-   
-Steps Taken:
-  - Removed duplicates and handled missing values.
-  - Standardized date-time format for analysis.
-  - Joined datasets using Excel and SQL.
-
-## 5. Skills and Tools Used:
+      
+## 3. Skills and Tools Used:
 ### Tools:
   - Excel for data cleaning and calculations
   - SQL for additional analysis
@@ -39,10 +47,12 @@ Steps Taken:
   - Data visualization and storytelling
 
 ### Data Cleaning/Preparation:
-  - In the initial data preparation phase, we performed the following tasks:
-  - Found and deleting duplicates.
+In the initial data preparation phase, we performed the following tasks:
+  - Removed duplicates and handled missing values.
   - Data cleaning and formatting.
+  - Standardized date-time format for analysis
   - Found the relationships for sheet to sheet
+  - Joined datasets using Excel and SQL
 
 ### Exploratory Data Analysis:
 **EDA** involved exploring the sales data to answer key questions, such as:
@@ -60,7 +70,7 @@ Steps Taken:
    4. What were the best and lowest-paid pizza name?
    5. What kinds of pizza name generate more revenue?
 
-## 5.5 Data Analysis:
+## Data Analysis:
 Include some interesting code/features worked with in **MySQL**:
    1. **SELECT** * **FROM** table 1 **WHERE** cond = 2;
    2. **SELECT** * **FROM** table 1 **WHERE** cond = 2 **GROUP BY** column1 **ORDER BY** column2;
@@ -70,14 +80,14 @@ Include some interesting code/features worked with in **MySQL**:
    4. **JOIN Query**
    5. **Sub-Query**
 
-## 6. Analysis and Insights:
+## 4. Analysis and Insights:
 Key Insights:
    1. People tended to buy pizzas increasingly on weekdays during lunch and dinner time, especially on Fridays (the busiest)
    2. The Classic Deluxe pizza was the most popular among customers; however, the Barbecue Chicken pizza brought the most revenue.
-   3. Large (L) size of pizzas generated the highest revenue.
+   3. The Large(L) size of pizzas generated the highest revenue.
    4. Promotions on family-size orders could increase revenue further, especially on Fridays and weekends.
 
-## 7. Visualizations:
+## 5. Visualizations:
 The Tableau dashboard includes:
    1. A sales trend line chart to visualize peak hours.
    2. A bar chart showing the highest revenue per day in weeks.
@@ -88,7 +98,7 @@ The Tableau dashboard includes:
    7. The Six of Bar Charts presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
    _**8. Data Visualization (Tableau)**_
 
-## 8. Conclusion:
+## 6. Conclusion:
 The analysis revealed that large (L) pizzas generate the highest revenue, with Classic Deluxe pizza and Barbecue Chicken pizza being the most popular choices among customers. Sales peak during lunch and dinner hours and most crowded on Fridays, highlighting key times for promotional efforts.
 
 _Recommendations:_
@@ -96,13 +106,13 @@ _Recommendations:_
   - Launch combo deals or promotions featuring the most popular pizza types.
   - Improve inventory planning for pizza dough and their ingredients during peak periods.
 
-## 9. Limitation:
+_Limitation:_
   - Should add customer feedback data to analyze satisfaction levels.
   - Incorporate delivery time and costs for delivery optimization.
   - Be outdated because it was in 2015. 
   - Should add locations for being more particular
 
-## 10. How to Access the Project:
+## 7. How to Access the Project:
 Download the files from this repository:
 
   - **1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv)**
@@ -120,7 +130,7 @@ View the interactive dashboard here:
 ![Best vs Worst Pizza Dashboard](https://github.com/user-attachments/assets/89d83bc9-c052-48bf-adde-da25659532f0)
 
 
-# USING SQL TO FIND Exploratory Data Analysis (EDA):
+## 8. USING SQL QUERIES:
 
 ```sql
 A. REVENUE BY HOURS:
