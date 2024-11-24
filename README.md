@@ -138,7 +138,32 @@ View the interactive dashboard here:
 ## 8. USING SQL QUERIES:
 
 ```sql
-A. REVENUE BY HOURS:
+
+A. OVERALL INFORMATION:
+
+      SELECT sum(total_price)
+      FROM order_details;
+-- Total Revenue
+
+      SELECT count( distinct order_id) AS Total_Orders, 
+             sum(total_price)/count( distinct order_id)  AS Avg_Per_Order
+      FROM order_details;
+-- Average revenue per order
+
+      SELECT count(order_id)
+      FROM orders;
+-- Total Orders
+
+      SELECT sum(quantity) AS Total_Pizzas
+      FROM order_details;
+-- Total Pizzas Sold
+
+      SELECT count(pizza_type_id) AS Pizza_Types
+      FROM pizza_types;
+-- Total Pizza Types
+
+
+B. REVENUE BY HOURS:
       SELECT `hour`, 
              sum(Order_details.total_price) AS Total_revenue
       FROM ( SELECT HOUR(orders.`time`) AS `Hour`, 
@@ -151,7 +176,7 @@ A. REVENUE BY HOURS:
 
 
 
-B. REVENUE BY MONTHS:
+C. REVENUE BY MONTHS:
       SELECT `month`, 
               sum(Order_details.total_price) AS Total_revenue
       FROM ( SELECT MONTH(orders.`date`) AS `month`, 
@@ -164,7 +189,7 @@ B. REVENUE BY MONTHS:
 
 
 
-C. AVG REVENUE PER ORDER
+D. AVG REVENUE PER ORDER
       SELECT count(distinct O.order_id) AS Order_num, 
              sum(OD.Total_price), 
              sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
@@ -173,7 +198,7 @@ C. AVG REVENUE PER ORDER
  
 
 
-D. REVENUE BY TOTAL ORDERS
+E. REVENUE BY TOTAL ORDERS
       SELECT count(distinct O.order_id) AS Order_num, 
              sum(OD.Total_price), 
              sum(OD.Total_price)/count(distinct O.order_id) AS Avg_Per_Order
@@ -182,7 +207,7 @@ D. REVENUE BY TOTAL ORDERS
       
 
 
-E. REVENUE BY SIZES
+F. REVENUE BY SIZES
       SELECT p.size, 
              count(OD.quantity) AS total_quantity, 
              sum(Od.Total_price) AS revenue
@@ -194,7 +219,7 @@ E. REVENUE BY SIZES
 
 
 
-F. PIZZAS SOLD PER DAY:
+G. PIZZAS SOLD PER DAY:
 -- Average Number of Pizza Sold Per Day
       SELECT sum(quantity)/31 AS Num_Pizza_perday
       FROM order_details;
@@ -213,7 +238,7 @@ F. PIZZAS SOLD PER DAY:
 
 
  
-G. TOTAL QUANTITY SOLD BY CATEGORY:
+H. TOTAL QUANTITY SOLD BY CATEGORY:
       SELECT pt.category, 
              sum(od.quantity) As total_quantity
       FROM pizza_types as Pt
@@ -224,7 +249,7 @@ G. TOTAL QUANTITY SOLD BY CATEGORY:
 
 
 
-H. TOTAL ORDERS SOLD BY CATEGORY:
+I. TOTAL ORDERS SOLD BY CATEGORY:
       SELECT pt.category, 
              count(DISTINCT o.order_id) As total_order
       FROM pizza_types as Pt
@@ -237,7 +262,7 @@ H. TOTAL ORDERS SOLD BY CATEGORY:
 
 
 
-I. TOTAL REVENUE SOLD BY CATEGORY
+J. TOTAL REVENUE SOLD BY CATEGORY
       SELECT pt.category, 
              sum(total_price) As Revenue
       FROM pizza_types as Pt
@@ -248,7 +273,7 @@ I. TOTAL REVENUE SOLD BY CATEGORY
 --I want to compare the number of category's pizza chosen by their Total Order vs Total Quantity, if there is interesting
 
 
-J. BEST AND WORST PIZZA:
+K. BEST AND WORST PIZZA:
 --(TOP 5) NAME + TOTAL QUANTITY
       SELECT  pt.name,
               sum(od.quantity)
