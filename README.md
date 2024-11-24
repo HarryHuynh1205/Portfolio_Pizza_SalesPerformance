@@ -83,6 +83,7 @@ Include some interesting code/features worked with in **MySQL**:
    5. **Sub-Query**
 
 ## 4. ANALYSIS vs INSIGHTS:
+
 Key Insights:
    1. People tended to buy pizzas increasingly on weekdays during lunch and dinner time, especially on Fridays (the busiest)
    2. The Classic Deluxe pizza was the most popular among customers; however, the Barbecue Chicken pizza brought the most revenue.
@@ -90,17 +91,18 @@ Key Insights:
    4. Promotions on family-size orders could increase revenue further, especially on Fridays and weekends.
 
 ## 5. VISUALIZATIONS:
+
 The Tableau dashboard includes:
-   1. A sales trend line chart to visualize peak hours.
-   2. A bar chart showing the highest revenue per day in weeks.
-   3. A heat map to identify peak sales days and times.
-   4. A pie chart demonstrating which sizes were chosen most by revenue
-   5. A second line chart showing the number of pizzas sold per day and estimating the numbers averagely
-   6. A second bar chart to present the quantities of category pizzas selected by Total Number sold and Total Orders
-   7. The Six of Bar Charts presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
-   **8. Data Visualization (Tableau)**
+   1. A sales trend **line chart** to visualize peak hours.
+   2. A **bar chart** showing the highest revenue per day in weeks.
+   3. A **pie chart** demonstrating which sizes were chosen most by revenue
+   4. A second **line chart** showing the number of pizzas sold per day and estimating the numbers averagely
+   5. A second **bar chart** to present the quantities of category pizzas selected by Total Number sold and Total Orders
+   6. The Six of **Bar Charts** presenting the Best and Lowest-Paid Pizzas by Revenue, Total Quantity, Total Order
+   7. **_Data Visualization_ ([Pizza_Sales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/Pizza_Sales_Dashboard_17321793664470/BestvsWorstPizzaDashboard))**
 
 ## 6. CONCLUSION:
+
 The analysis revealed that large (L) pizzas generate the highest revenue, with Classic Deluxe pizza and Barbecue Chicken pizza being the most popular choices among customers. Sales peak during lunch and dinner hours and most crowded on Fridays, highlighting key times for promotional efforts.
 
 _Recommendations:_
@@ -115,6 +117,7 @@ _Limitation:_
   - Should add locations for being more particular
 
 ## 7. HOW TO ACCESS THE PROJECT:
+
 Download the files from this repository:
 
   - **1. [Order_Details.csv](https://github.com/user-attachments/files/17858426/order_details.csv)**
