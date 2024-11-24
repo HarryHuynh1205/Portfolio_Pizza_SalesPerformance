@@ -140,27 +140,27 @@ View the interactive dashboard here:
 ```sql
 
 A. OVERALL INFORMATION:
-
+1. TOTAL REVENUE
       SELECT sum(total_price)
       FROM order_details;
--- Total Revenue
 
+2. AVERAGE REVENUE PER ORDER
       SELECT count( distinct order_id) AS Total_Orders, 
              sum(total_price)/count( distinct order_id)  AS Avg_Per_Order
       FROM order_details;
--- Average revenue per order
 
+3. TOTAL ORDERS
       SELECT count(order_id)
       FROM orders;
--- Total Orders
 
+4. TOTAL PIZZAS SOLD
       SELECT sum(quantity) AS Total_Pizzas
       FROM order_details;
--- Total Pizzas Sold
 
+5. TOTAL PIZZA TYPES
       SELECT count(pizza_type_id) AS Pizza_Types
       FROM pizza_types;
--- Total Pizza Types
+
 
 
 B. REVENUE BY HOURS:
